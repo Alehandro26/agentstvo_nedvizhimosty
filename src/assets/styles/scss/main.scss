@@ -1,0 +1,22 @@
+// Utils
+@import "./utils/reset";
+@import "./utils/fonts";
+@import "./utils/colors";
+@import "./utils/media";
+@import "./utils/typography";
+
+@mixin container {
+  padding-left: 10px;
+  padding-right: 10px;
+  @include small-desktop {
+    padding-left: calc((100vw - 1220px) / 2);
+    padding-right: calc((100vw - 1220px) / 2);
+  }
+}
+
+// Components
+@import "./components/index.scss";
+
+body {
+  @include Text;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/images/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <header class="header">
+      <img class="header__logo" src="./src/assets/images/logo.svg" alt="logo" />
+
+      <nav class="header-nav nav">
+        <span class="nav__link nav__sublinks">
+          Пункт-1
+          <div class="nav__sublink-list">
+            <a class="nav__sublink" href="#">
+              <img
+                class="nav__sublink-icon"
+                src="./src/assets/images/sofa.svg"
+                alt="sofa"
+              />
+              <div>
+                <div class="nav__sublink-title">Меню 1</div>
+                <div class="nav__sublink-desc">Покупайте и продавайте</div>
+              </div>
+            </a>
+            <a class="nav__sublink" href="#">
+              <img
+                class="nav__sublink-icon"
+                src="./src/assets/images/sofa.svg"
+                alt="sofa"
+              />
+              <div>
+                <div class="nav__sublink-title">Меню 2</div>
+                <div class="nav__sublink-desc">Покупайте и продавайте</div>
+              </div>
+            </a>
+            <a class="nav__sublink" href="#">
+              <img
+                class="nav__sublink-icon"
+                src="./src/assets/images/sofa.svg"
+                alt="sofa"
+              />
+              <div>
+                <div class="nav__sublink-title">Меню 1</div>
+                <div class="nav__sublink-desc">Покупайте и продавайте</div>
+              </div>
+            </a>
+            <a class="nav__sublink" href="#">
+              <img
+                class="nav__sublink-icon"
+                src="./src/assets/images/sofa.svg"
+                alt="sofa"
+              />
+              <div>
+                <div class="nav__sublink-title">Меню 2</div>
+                <div class="nav__sublink-desc">Покупайте и продавайте</div>
+              </div>
+            </a>
+          </div>
+        </span>
+        <a class="nav__link" href="#">Пункт-2</a>
+        <a class="nav__link" href="#">Пункт-3</a>
+        <a class="nav__link" href="#">Пункт-4</a>
+        <a class="nav__link" href="#">Пункт-5</a>
+      </nav>
+
+      <button class="btn header__btn">Кнопка</button>
+    </header>
+
+    <section class="hero">
+      <div class="hero__left">
+        <h1 class="hero__title">
+          Недвижимость
+          <br />Санкт-Петербурга и&nbsp;Москвы
+        </h1>
+
+        <form class="form">
+          <div class="form__row">
+            <div class="form__group">
+              <label>Выбрать город</label>
+              <div class="select">
+                <div class="select__root">
+                  <input type="text" placeholder="Выбрать город" readonly />
+                </div>
+                <div class="select__item-list">
+                  <div class="select__item">Москва</div>
+                  <div class="select__item">Санкт-Петербург</div>
+                  <div class="select__item">Владивосток</div>
+                  <div class="select__item">Оренбург</div>
+                </div>
+              </div>
+            </div>
+            <div class="form__group">
+              <label>Ваш e-mail</label>
+              <input type="text" placeholder="info@mail.ru" />
+            </div>
+          </div>
+          <div class="form__row">
+            <input type="submit" value="Кнопка действия" class="btn" />
+          </div>
+          <div class="form__row">
+            <label class="form__accept">
+              <div class="checkbox">
+                <input type="checkbox" name="accept" id="accept" />
+                <span></span>
+              </div>
+              <span>
+                Отправляя нам данную форму вы соглашаетесь с
+                <br />
+                <a href="#">политикой конфиденциальности</a>
+              </span>
+            </label>
+          </div>
+        </form>
+      </div>
+
+      <img src="./src/assets/images/girl.svg" alt="girl" />
+    </section>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

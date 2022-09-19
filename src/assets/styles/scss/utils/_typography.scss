@@ -1,0 +1,81 @@
+@import "_media";
+
+@mixin Font($size, $line-height) {
+  font-family: Formular;
+  font-size: $size;
+  line-height: $line-height;
+  letter-spacing: 0;
+  font-weight: normal;
+}
+
+@mixin H1 {
+  @include Font(30px, 35px);
+
+  @include small-desktop {
+    @include Font(42px, 52px);
+  }
+
+  @include medium-desktop {
+    @include Font(48px, 55px);
+  }
+}
+
+@mixin H2 {
+  @include Font(26px, 33px);
+
+  @include small-desktop {
+    @include Font(30px, 35px);
+  }
+
+  @include medium-desktop {
+    @include Font(35px, 40px);
+  }
+}
+
+@mixin H3 {
+  @include Font(18px, 22px);
+
+  @include small-desktop {
+    @include Font(20px, 26px);
+  }
+
+  @include medium-desktop {
+    @include Font(25px, 30px);
+  }
+}
+
+@mixin H5 {
+  @include Font(14px, 18px);
+
+  @include small-desktop {
+    @include Font(14px, 17px);
+  }
+
+  @include medium-desktop {
+    @include Font(16px, 20px);
+  }
+}
+
+@mixin BigText {
+  @include Font(15px, 22px);
+
+  @include small-desktop {
+    @include Font(18px, 26px);
+  }
+
+  @include medium-desktop {
+    @include Font(20px, 34px);
+  }
+}
+
+@mixin Text {
+  @include Font(14px, 18px);
+
+  @include small-desktop {
+    @include Font(14px, 18px);
+  }
+
+  @include medium-desktop {
+    @include Font(14px, 18px);
+  }
+}

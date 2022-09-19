@@ -1,0 +1,56 @@
+.hero {
+  @include container;
+  background: $black-dark;
+  height: 885px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__left {
+    max-width: 720px;
+  }
+
+  &__title {
+    @include H1;
+    max-width: 597px;
+    margin-bottom: 47px;
+  }
+}
+
+.form {
+  &__row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+    & > * + * {
+      margin-left: 30px;
+    }
+  }
+
+  &__group {
+    width: 100%;
+  }
+
+  &__group label {
+    @include Font(14px, 25px);
+    color: $gray-light;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  &__accept {
+    display: flex;
+    @include Text;
+    color: $gray-light;
+
+    .checkbox {
+      margin-right: 20px;
+    }
+
+    a {
+      color: $red;
+    }
+  }
+}
