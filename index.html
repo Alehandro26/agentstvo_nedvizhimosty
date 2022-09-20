@@ -12,7 +12,20 @@
 
       <nav class="header-nav nav">
         <span class="nav__link nav__sublinks">
-          Пункт-1
+          Пункт 1<svg
+            width="10"
+            height="6"
+            viewBox="0 0 10 6"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.2897 1L5.2897 5L9.2897 1"
+              stroke="white"
+              stroke-linecap="round"
+            />
+          </svg>
+
           <div class="nav__sublink-list">
             <a class="nav__sublink" href="#">
               <img
@@ -60,10 +73,10 @@
             </a>
           </div>
         </span>
-        <a class="nav__link" href="#">Пункт-2</a>
-        <a class="nav__link" href="#">Пункт-3</a>
-        <a class="nav__link" href="#">Пункт-4</a>
-        <a class="nav__link" href="#">Пункт-5</a>
+        <a class="nav__link" href="#">Пункт 2</a>
+        <a class="nav__link" href="#">Пункт 3</a>
+        <a class="nav__link" href="#">Пункт 4</a>
+        <a class="nav__link" href="#">Пункт 5</a>
       </nav>
 
       <button class="btn header__btn">Кнопка</button>
@@ -118,6 +131,201 @@
 
       <img src="./src/assets/images/girl.svg" alt="girl" />
     </section>
+
+    <section class="slides">
+      <h2 class="slides__title">Обычный слайдер</h2>
+      <div class="slider">
+        <div class="slider__wrapper">
+          <img
+            src="./src/assets/images/slide-1.png"
+            alt=""
+            class="slider__image"
+          /><img
+            src="./src/assets/images/slide-2.png"
+            alt=""
+            class="slider__image"
+          /><img
+            src="./src/assets/images/slide-3.png"
+            alt=""
+            class="slider__image"
+          />
+        </div>
+        <div class="slider-btn slider__prev">
+          <svg
+            width="7"
+            height="12"
+            viewBox="0 0 7 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6.5 1.09033L1.5 6.09033L6.5 11.0903"
+              stroke="#2C2E3E"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <div class="slider-btn slider__next">
+          <svg
+            width="7"
+            height="12"
+            viewBox="0 0 7 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6.5 1.09033L1.5 6.09033L6.5 11.0903"
+              stroke="#2C2E3E"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="slides__dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </section>
+
+    <div class="progress">
+      <div class="progress__wrapper">
+        <div class="progress__bar">
+          <div>5 %</div>
+        </div>
+        <div class="progress__btn-wrapper">
+          <button class="progress__btn btn">+ 25 %</button>
+          <span
+            >При нажатии на кнопку прогрессбар заполняется на столько процентов,
+            сколько указано на кнопке</span
+          >
+        </div>
+      </div>
+      <div class="progress__text">
+        <h4 class="progress__title">
+          Большинство онкологических пациентов испытывают страх перед
+          неизвестностью того, что их ожидает в процессе лечения рака.
+        </h4>
+        <div class="progress__info">
+          Подробнее<svg
+            width="10"
+            height="7"
+            viewBox="0 0 10 7"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 1.49438L5 5.49438L9 1.49438"
+              stroke="#8F95AC"
+              stroke-linecap="round"
+            />
+          </svg>
+          <div class="progress__popup">
+            Недвижимость Санкт-Петербурга и Москвы
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="map">
+      <div class="map__wrapper">
+        <div class="map__card">
+          <svg
+            width="350"
+            height="274"
+            viewBox="0 0 350 274"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g filter="url(#filter0_d_35_20)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M25 16.6973C22.2386 16.6973 20 18.9358 20 21.6973V209.28V211.697V249.914L53.2166 216.697H325C327.761 216.697 330 214.459 330 211.697V21.6973C330 18.9358 327.761 16.6973 325 16.6973H25Z"
+                fill="white"
+              />
+            </g>
+            <defs>
+              <filter
+                id="filter0_d_35_20"
+                x="0"
+                y="0.697266"
+                width="350"
+                height="273.217"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feOffset dy="4" />
+                <feGaussianBlur stdDeviation="10" />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0.560291 0 0 0 0 0.582991 0 0 0 0 0.674111 0 0 0 0.2 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="BackgroundImageFix"
+                  result="effect1_dropShadow_35_20"
+                />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="effect1_dropShadow_35_20"
+                  result="shape"
+                />
+              </filter>
+            </defs>
+          </svg>
+          <div class="map__text">
+            <h5 class="map__title">Наш адрес</h5>
+            <span class="map__address"
+              >Санкт-Петербург, Владимирский проспект, 23, лит. А, офис
+              701</span
+            >
+            <a
+              href="https://yandex.ru/maps/?um=constructor%3A280f8deae69a672ef8bb2aa63c5ebf97385a12f91db3a3e922ce1515bbc9da32&source=constructorLink"
+              class="map__link"
+              >Схема проезда</a
+            >
+          </div>
+        </div>
+        <script
+          type="text/javascript"
+          charset="utf-8"
+          async
+          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A280f8deae69a672ef8bb2aa63c5ebf97385a12f91db3a3e922ce1515bbc9da32&amp;width=1218&amp;height=506&amp;lang=ru_RU&amp;scroll=true"
+        ></script>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3 class="card__title">3,000</h3>
+        <span>Агенств</span>
+      </div>
+      <div class="card">
+        <h3 class="card__title">10,000</h3>
+        <span>Партнеров</span>
+      </div>
+      <div class="card">
+        <h3 class="card__title">80,000</h3>
+        <span>Квартир в базе</span>
+      </div>
+      <div class="card">
+        <h3 class="card__title">100+</h3>
+        <span>Застройщиков</span>
+      </div>
+      <div class="card">
+        <h3 class="card__title">200</h3>
+        <span>Сотрудников</span>
+      </div>
+    </div>
 
     <script type="module" src="/src/main.js"></script>
   </body>

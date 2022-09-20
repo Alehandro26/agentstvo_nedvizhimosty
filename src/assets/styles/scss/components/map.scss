@@ -1,0 +1,45 @@
+.map {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 81px;
+
+    &__wrapper {
+        position: relative;
+        width: fit-content;
+    }
+
+    &__card {
+        position: absolute;
+        top: 114px;
+        left: 499px;
+    }
+
+    &__text {
+        position: relative;
+        max-width: 207px;
+        margin-top: -210px;
+        margin-left: 65px;
+    }
+
+    &__title {
+        margin-bottom: 14px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color: $black-light;
+    }
+
+    &__address {
+        display: block;
+        margin-bottom: 11px;
+        color: $black-light;
+        font-weight: 400;
+    }
+
+    &__link {
+        display: block;
+        width: fit-content;
+        color: $red;
+        border-bottom: 1px solid $red;
+    }
+}

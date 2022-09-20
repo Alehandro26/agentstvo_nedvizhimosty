@@ -13,6 +13,7 @@
 
   &__title {
     @include H1;
+    font-weight: 700;
     max-width: 597px;
     margin-bottom: 47px;
   }

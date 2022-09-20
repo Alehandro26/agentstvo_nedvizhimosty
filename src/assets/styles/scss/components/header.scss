@@ -1,13 +1,14 @@
 .btn {
   color: #fff;
-  background: $red;
+  background: $red-bright;
   padding: 19px 26px 21px 26px;
   border-radius: 100px;
   @include H5;
   text-align: center;
+  cursor: pointer;
 
   &:hover {
-    box-shadow: 0px 10px 20px rgba($red, 0.3);
+    box-shadow: 0px 10px 20px rgba($red-bright, 0.3);
     border-radius: 32.5px;
   }
 }
@@ -54,6 +55,18 @@
     &.active,
     &:active {
       background: $red;
+    }
+  }
+
+  &__sublinks {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    &.active {
+      svg {
+        transform: rotate(180deg);
+      }
     }
   }
 
