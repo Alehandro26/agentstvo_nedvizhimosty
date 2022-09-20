@@ -17,6 +17,10 @@
 // Components
 @import "./components/index.scss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @include Text;
 }

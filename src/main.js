@@ -80,3 +80,8 @@ const infoPopup = document.querySelector(".progress__info");
 infoPopup.addEventListener("click", () => {
   infoPopup.classList.toggle("progress__info_active");
 });
+
+//ScrollTop
+const scrollTop = document.querySelector(".footer__btn");
+
+scrollTop.addEventListener('click', () => scrollTo(0, 0));

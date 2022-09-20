@@ -1,7 +1,6 @@
 .hero {
   @include container;
   background: $black-dark;
-  height: 885px;
   color: #fff;
   display: flex;
   align-items: center;
@@ -9,6 +8,8 @@
 
   &__left {
     max-width: 720px;
+    margin-top: 150px;
+    margin-bottom: 134px;
   }
 
   &__title {
@@ -16,6 +17,10 @@
     font-weight: 700;
     max-width: 597px;
     margin-bottom: 47px;
+  }
+
+  &__image {
+    margin-top: -62px;
   }
 }
 
@@ -28,6 +33,13 @@
     & > * + * {
       margin-left: 30px;
     }
+
+    &:nth-child(2) {
+      input {
+        padding-left: 42px;
+        padding-right: 42px;
+      }
+    } 
   }
 
   &__group {

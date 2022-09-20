@@ -1,0 +1,44 @@
+.footer {
+    @include container;
+
+    &__btn {
+        margin-bottom: 24px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        @include Text;
+        color: $black-light;
+        cursor: pointer;
+    }
+
+    &__wrapper-btn {
+        display: flex;
+        justify-content: flex-end;
+        border-bottom: 1px solid rgba($gray-light, 0.2);
+    }
+
+    &__wrapper {
+        padding: 33px 0 90px;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__address {
+        margin-right: 214px;
+        max-width: 286px;
+        @include Text;
+    }
+
+    &__number {
+        margin-right: auto;
+        @include H3;
+        color: $black-light;
+    }
+
+    &__link {
+        @include Text;
+        font-weight: 400;
+        color: $red;
+        border-bottom: 1px solid $red;
+    }
+}

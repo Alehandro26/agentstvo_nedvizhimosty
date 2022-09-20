@@ -2,8 +2,11 @@
     padding-bottom: 120px;
     display: flex;
     justify-content: space-between;
-    padding-left: calc((100vw - 1220px) / 2);
-    padding-right: calc((100vw - 1220px) / 2);
+    @include container;
+
+    &__wrapper {
+        margin-top: 11px;
+    }
 
     &__bar {
         margin-bottom: 39px;
@@ -49,7 +52,7 @@
     }
 
     &__title {
-        margin-bottom: 15px;
+        margin-bottom: 30px;
         font-weight: 300;
         font-size: 20px;
         line-height: 34px;
