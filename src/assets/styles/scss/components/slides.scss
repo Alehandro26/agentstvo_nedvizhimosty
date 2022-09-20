@@ -1,12 +1,27 @@
 .slides {
-    padding: 83px 0 120px;
+    padding: 70px 0 68px;
 
+    @include small-desktop {
+        padding: 83px 0 86px;
+    }
+    @include medium-desktop {
+        padding: 83px 0 120px;
+    }
+    
     &__title {
         @include H1;
         color: $black-light;
         font-weight: 700;
         text-align: center;
-        margin-bottom: 53px;
+        margin-bottom: 32px;
+
+        @include small-desktop {
+            margin-bottom: 42px;
+        }
+
+        @include medium-desktop {
+            margin-bottom: 53px;
+        }
     }
 
     &__dots {
@@ -16,7 +31,15 @@
         width: fit-content;
         display: flex;
         gap: 17px;
-        margin-top: 53px;
+        margin-top: 34px;
+        
+        @include small-desktop {
+            margin-top: 40px;
+        }
+
+        @include medium-desktop {
+            margin-top: 53px;
+        }
         
         span {
             display: block;
@@ -36,14 +59,42 @@
 
 .slider {
     position: relative;
-    padding-left: calc((100vw - 1220px) / 2);
+    padding-left: 10.67vw;
     overflow: hidden;
+
+    @include small-desktop {
+        padding-left: 11.09vw;
+    }
+
+    @include medium-desktop {
+        padding-left: calc((100vw - 1220px) / 2);
+    }
 
     &__wrapper {
         position: relative;
         display: flex;
         flex-wrap: nowrap;
-        gap: 30px;
+        gap: 17px;
+
+        @include small-desktop {
+            gap: 22px;
+        }
+
+        @include medium-desktop {
+            gap: 30px;
+        }
+    }
+
+    &__image {
+        width: 231px;
+
+        @include small-desktop {
+            width: 386px;
+        }
+
+        @include medium-desktop {
+            width: auto;
+        }
     }
 
     &__prev {
@@ -51,14 +102,31 @@
     }
 
     &__next {
-        right: 44px;
+        right: 7.55vw;
+        @include small-desktop {
+            right: 9.09vw;
+        }
+
+        @include medium-desktop {
+            right: 44px;
+        }
+        
         transform: rotate(180deg);
     }
 }
 
 .slider-btn {
     position: absolute;
-    top: 145px;
+    top: 58px;
+
+    @include small-desktop {
+        top: 113px;
+    }
+
+    @include medium-desktop {
+        top: 145px;
+    }
+    
     padding: 20px 22.5px;
     background: #FFFFFF;
     border-radius: 50%;

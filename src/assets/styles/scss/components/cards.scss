@@ -1,14 +1,36 @@
 .cards {
-    padding-bottom: 65px;
     @include container;
     display: flex;
     align-items: center;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 19px;
+    padding-bottom: 23px;
+
+    @include small-desktop {
+        padding-bottom: 45px;
+        gap: 21.86px;
+        flex-wrap: nowrap;
+    }
+    @include medium-desktop {
+        padding-bottom: 65px;
+        gap: 30px;
+    }
+    
 }
 
 .card {
-    padding: 38px 0 33px 34px;
-    flex: 1 1 220px;
+    padding: 27px 0 25px 21px;
+    flex: 0 1 188px;
+    
+    @include small-desktop {
+        padding: 28.8px 0 29px 25px;
+        flex: 1 1 182px;
+    }
+    @include medium-desktop {
+        padding: 38px 0 33px 34px;
+        flex: 1 1 220px;
+    }
+    
     background: #FFFFFF;
     box-shadow: 0px 0px 15px rgba(143, 149, 172, 0.15);
     border-radius: 5px;

@@ -1,12 +1,20 @@
 input[type="text"] {
-  width: 345px;
+  width: 294px;
+  padding: 21px 17px;
   outline: none;
-
   background: $black-dark;
   color: #fff;
   border: 1px solid rgba($gray-light, 30%);
-  padding: 21px 26px;
   border-radius: 4px;
+
+  @include small-desktop {
+    width: 284px;
+    padding: 21px 26px;
+  }
+
+  @include medium-desktop {
+    width: 345px;
+  }
 }
 
 .select {
@@ -16,7 +24,16 @@ input[type="text"] {
 
   &__root {
     input {
-      width: 345px;
+      width: 294px;
+      
+      @include small-desktop {
+        width: 284px;
+      }
+
+      @include medium-desktop {
+        width: 345px;
+      }
+      
       cursor: pointer;
       .active & {
         border-radius: 4px 4px 0 0;

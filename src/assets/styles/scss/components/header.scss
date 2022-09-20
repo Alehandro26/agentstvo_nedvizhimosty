@@ -16,28 +16,54 @@
 .header {
   display: flex;
   align-items: center;
-
   background: $black-light;
+  padding: 10px 20px;
 
-  padding: 15px 65px;
+  @include small-desktop {
+    padding: 15px 40px;
+  }
 
+  @include medium-desktop {
+    padding: 15px 65px;
+  }
+  
   &__logo {
-    width: 74px;
-    margin-right: 155px;
+    width: 58px;
+    margin-right: 20px;
+
+    @include small-desktop {
+      margin-right: 109px;
+      width: 74px;
+    }
+
+    @include medium-desktop {
+      margin-right: 155px;
+    }
   }
 
   &__btn {
     margin-left: auto;
-    width: 144px;
-    padding: 14px 11px 16px;
+    padding: 11px 37px 11px;
+
+    @include small-desktop {
+      padding: 14px 11px 16px;
+      width: 144px;
+    } 
   }
 }
 
 .nav {
   display: flex;
   align-items: center;
+
   & > * + * {
-    margin-left: 69px;
+    @include small-desktop {
+      margin-left: 45px;
+    }
+
+    @include medium-desktop {
+      margin-left: 69px;
+    }
   }
 
   &__link {
@@ -58,7 +84,15 @@
     }
 
     &:nth-child(2) {
-      margin-left: 48px;
+      margin-left: -21px;
+      
+      @include small-desktop {
+        margin-left: 32px;
+      }
+
+      @include medium-desktop {
+        margin-left: 48px;
+      }
     }
   }
 

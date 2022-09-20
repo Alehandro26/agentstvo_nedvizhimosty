@@ -27,12 +27,13 @@ const sliderDots = document.querySelectorAll(".slides__dots span");
 const slideWidth = document.querySelector(".slider__image").clientWidth;
 const sliderPrev = document.querySelector(".slider__prev");
 const sliderNext = document.querySelector(".slider__next");
+const sliderGap = parseInt(window.getComputedStyle(document.querySelector(".slider__wrapper")).gap);
 
 sliderDots[0].classList.add("active");
 
 sliderNext.addEventListener("click", () => {
-    offset += slideWidth + 30;
-    if (offset > slideWidth + 30) {
+    offset += slideWidth + sliderGap;
+    if (offset > slideWidth + sliderGap) {
         offset = 0;
         sliderWrapper.style.transition = "0s";
         sliderDots[0].classList.add("active");
@@ -46,9 +47,9 @@ sliderNext.addEventListener("click", () => {
 });
 
 sliderPrev.addEventListener("click", () => {
-    offset -= slideWidth + 30;
+    offset -= slideWidth + sliderGap;
     if (offset < 0) {
-        offset = slideWidth + 30;
+        offset = slideWidth + sliderGap;
         sliderWrapper.style.transition = "0s";
         sliderDots[0].classList.remove("active");
         sliderDots[1].classList.add("active");

@@ -1,22 +1,50 @@
 .progress {
-    padding-bottom: 120px;
     display: flex;
     justify-content: space-between;
     @include container;
+    gap: 8.07vw;
+    padding-bottom: 96px;
 
+    @include small-desktop {
+        gap: 9.65vw;
+        padding-bottom: 83px;
+    }
+
+    @include medium-desktop {
+        gap: 0px;
+        padding-bottom: 120px;
+    }
+    
     &__wrapper {
-        margin-top: 11px;
+        @include small-desktop {
+            margin-top: 0;
+        }
+        @include medium-desktop {
+            margin-top: 11px;
+        }
     }
 
     &__bar {
-        margin-bottom: 39px;
+        margin-bottom: 22px;
         height: 40px;
         width: 100%;
         background: rgba($gray-light, 0.1);
         border-radius: 100px;
 
+        @include small-desktop {
+            margin-bottom: 39px;
+        }
+
         div {
-            padding: 0 34px;
+            padding: 0 27px;
+
+            @include small-desktop {
+                padding: 0 38px;
+            }
+            @include medium-desktop {
+                padding: 0 34px;
+            }
+            
             height: 100%;
             width: 5%;
             background-color: $black-light;
@@ -32,31 +60,63 @@
 
     &__btn-wrapper {
         display: flex;
-        align-items: center;
-        gap: 31px;
+        align-items: flex-start;
+        gap: 16px;
+
+        @include small-desktop {
+            gap: 25px;
+        }
+
+        @include medium-desktop {
+            align-items: center;
+            gap: 31px;
+        }
 
         span {
-            max-width: 259px;
+            max-width: 169px;
             font-weight: 400;
             color: #000000;
+
+            @include small-desktop {
+                max-width: 259px;
+            }
         }
     }
  
    &__btn {
         white-space: nowrap;
-        width: 180px;
+        width: 108px;
+
+        @include small-desktop {
+            width: 180px;
+            flex: 1 0 auto;
+        }
     }
 
     &__text {
-        max-width: 594px;
+        max-width: 248px;
+
+        @include small-desktop {
+            max-width: 489px;
+        }
+        @include medium-desktop {
+            max-width: 594px;
+        }
     }
 
     &__title {
-        margin-bottom: 30px;
+        margin-bottom: 26px;
+        @include BigText;
         font-weight: 300;
-        font-size: 20px;
-        line-height: 34px;
         color: $black-light;
+
+        @include small-desktop {
+            margin-bottom: 27px;
+        }
+
+        @include medium-desktop {
+            margin-bottom: 30px;
+        }
     }
 
     &__info {

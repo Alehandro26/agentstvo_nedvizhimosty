@@ -18,15 +18,28 @@
     }
 
     &__wrapper {
-        padding: 33px 0 90px;
         display: flex;
         align-items: flex-start;
+        padding: 24px 0 43px;
+
+        @include small-desktop {
+            padding: 33px 0 90px;
+        }
+        
     }
 
     &__address {
-        margin-right: 214px;
-        max-width: 286px;
         @include Text;
+        max-width: 196px;
+        margin-right: 11px;
+
+        @include small-desktop {
+            max-width: 286px;
+            margin-right: 108px;
+        }
+        @include medium-desktop {
+            margin-right: 214px;
+        }     
     }
 
     &__number {

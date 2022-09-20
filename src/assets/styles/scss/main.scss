@@ -6,9 +6,15 @@
 @import "./utils/typography";
 
 @mixin container {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 10.67vw;
+  padding-right: 10.67vw;
+
   @include small-desktop {
+    padding-left: 11.09vw;
+    padding-right: 11.09vw;
+  }
+
+  @include medium-desktop {
     padding-left: calc((100vw - 1220px) / 2);
     padding-right: calc((100vw - 1220px) / 2);
   }
