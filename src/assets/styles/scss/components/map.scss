@@ -17,7 +17,12 @@
 
         iframe {
             max-width: 78.64vw;
-            max-height: 32.72vw;
+            max-height: 86.72vw;
+            
+            @include tablet {
+                max-width: 78.64vw;
+                max-height: 32.72vw;
+            }
             
             @include small-desktop {
                 max-width: 997px;
@@ -35,6 +40,10 @@
         position: absolute;
         left: 248px;
         top: -8px;
+
+        @include mobile {
+            display: none;
+        }
 
         @include small-desktop {
             top: 89px;

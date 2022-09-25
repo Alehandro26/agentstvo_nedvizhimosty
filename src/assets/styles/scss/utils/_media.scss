@@ -5,7 +5,7 @@ $medium-desktop-width: 1282px;
 $big-desktop-width: 1920px;
 
 @mixin mobile {
-  @media screen and (min-width: #{$mobile-width}) {
+  @media screen and (min-width: #{$mobile-width}) and (max-width: 767px) {
     @content;
   }
 }

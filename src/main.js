@@ -23,6 +23,7 @@ selects.forEach((select) => {
 //Slider
 let offset = 0;
 const sliderWrapper = document.querySelector(".slider__wrapper");
+const sliderLength = document.querySelectorAll(".slider__image");
 const sliderDots = document.querySelectorAll(".slides__dots span");
 const slideWidth = document.querySelector(".slider__image").clientWidth;
 const sliderPrev = document.querySelector(".slider__prev");
@@ -33,14 +34,21 @@ sliderDots[0].classList.add("active");
 
 sliderNext.addEventListener("click", () => {
     offset += slideWidth + sliderGap;
-    if (offset > slideWidth + sliderGap) {
+    if (offset > (slideWidth + sliderGap) * (sliderLength.length - 1)) {
         offset = 0;
         sliderWrapper.style.transition = "0s";
         sliderDots[0].classList.add("active");
         sliderDots[1].classList.remove("active");
-    } else {
-        sliderDots[1].classList.add("active");
+        sliderDots[2].classList.remove("active");
+    } else if (offset > slideWidth + sliderGap) {
+        sliderDots[2].classList.add("active");
         sliderDots[0].classList.remove("active");
+        sliderDots[1].classList.remove("active");
+        sliderWrapper.style.transition = "left .3s ease";
+    } else {
+        sliderDots[2].classList.remove("active");
+        sliderDots[0].classList.remove("active");
+        sliderDots[1].classList.add("active");
         sliderWrapper.style.transition = "left .3s ease";
     }
     sliderWrapper.style.left = -offset + "px"; 
@@ -64,15 +72,17 @@ sliderPrev.addEventListener("click", () => {
 //Progress
 const progressBar = document.querySelector(".progress__bar div");
 const progressBtn = document.querySelector(".progress__btn");
+const progressBarWidth = document.querySelector(".progress__bar").clientWidth;
 
 progressBtn.addEventListener("click", () => {
-  const widthBar = Math.ceil(parseInt(window.getComputedStyle(progressBar).width) / 470 * 100);
+  const widthBar = Math.ceil(parseInt(window.getComputedStyle(progressBar).width) / progressBarWidth * 100);
   progressBar.style.width = (widthBar + 25) + "%";
   progressBar.innerHTML = (widthBar + 25) + " %";
 
   if (widthBar >= 75) {
     progressBar.innerHTML = "100 %";
     progressBar.style.width = "100%";
+    progressBar.style.padding = "0";
   }
 });
 
@@ -86,3 +96,19 @@ infoPopup.addEventListener("click", () => {
 const scrollTop = document.querySelector(".footer__btn");
 
 scrollTop.addEventListener('click', () => scrollTo(0, 0));
+
+//Mobile menu 
+const burger = document.querySelector('.header__button');
+const popupMob = document.querySelector('.popup');
+const linksMenu = document.querySelectorAll('.popup__link');
+
+burger.addEventListener('click', () => {
+    burger.classList.toggle('header__button_active');
+    popupMob.classList.toggle('popup_active');
+  } 
+);
+
+linksMenu.forEach(e => e.addEventListener('click', () => {
+  burger.classList.remove('header__button_active');
+  popupMob.classList.remove('popup_active');
+}));

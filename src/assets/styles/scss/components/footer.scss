@@ -22,6 +22,11 @@
         align-items: flex-start;
         padding: 24px 0 43px;
 
+        @include mobile {
+            flex-direction: column;
+            gap: 15px;
+        }
+
         @include small-desktop {
             padding: 33px 0 90px;
         }

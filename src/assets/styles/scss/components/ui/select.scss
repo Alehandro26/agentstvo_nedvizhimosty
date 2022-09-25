@@ -21,6 +21,7 @@ input[type="text"] {
   display: block;
   position: relative;
   @include Text;
+  width: fit-content;
 
   &__root {
     input {
@@ -37,6 +38,17 @@ input[type="text"] {
       cursor: pointer;
       .active & {
         border-radius: 4px 4px 0 0;
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      right: 24px;
+      transform: translateY(-50%);
+
+      .active & {
+        transform: translateY(-50%) rotate(180deg);
       }
     }
   }

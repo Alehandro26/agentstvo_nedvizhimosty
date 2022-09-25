@@ -20,12 +20,17 @@
 
 .card {
     padding: 27px 0 25px 21px;
-    flex: 0 1 188px;
+    flex: 1 1;
+
+    @include tablet {
+        flex: 0 1 188px;
+    }
     
     @include small-desktop {
         padding: 28.8px 0 29px 25px;
         flex: 1 1 182px;
     }
+    
     @include medium-desktop {
         padding: 38px 0 33px 34px;
         flex: 1 1 220px;
