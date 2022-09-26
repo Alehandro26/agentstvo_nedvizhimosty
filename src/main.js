@@ -57,14 +57,21 @@ sliderNext.addEventListener("click", () => {
 sliderPrev.addEventListener("click", () => {
     offset -= slideWidth + sliderGap;
     if (offset < 0) {
-        offset = slideWidth + sliderGap;
+        offset = (slideWidth + sliderGap) * (sliderLength.length - 1);
         sliderWrapper.style.transition = "0s";
         sliderDots[0].classList.remove("active");
-        sliderDots[1].classList.add("active");
-    } else {
-        sliderWrapper.style.transition = "left .3s ease";
+        sliderDots[1].classList.remove("active");
+        sliderDots[2].classList.add("active");
+    } else if (offset < slideWidth + sliderGap) {
         sliderDots[0].classList.add("active");
         sliderDots[1].classList.remove("active");
+        sliderDots[2].classList.remove("active");
+        sliderWrapper.style.transition = "left .3s ease";
+    } else {
+        sliderWrapper.style.transition = "left .3s ease";
+        sliderDots[1].classList.add("active");
+        sliderDots[0].classList.remove("active");
+        sliderDots[2].classList.remove("active");
     }
     sliderWrapper.style.left = -offset + "px";   
 });
